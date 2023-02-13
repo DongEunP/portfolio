@@ -5,7 +5,7 @@ $(document).on('click', '.intro_img', function(){
   $('.intro_img').toggleClass('hide');
   $('.load_wrap').css('opacity',(1));
   timer = setTimeout(function(){
-    location.href = 'index.html';
+    location.href = 'main.html';
   },3000);
 });
 

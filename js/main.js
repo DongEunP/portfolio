@@ -2,7 +2,7 @@
 // 인트로
 $(document).on('click', '.intro_img', function(){
   var timer;
-  $('.intro_img').addClass('hide');
+  $('.intro_img').fadeOut();
   $('.load_wrap').css('opacity',(1));
   timer = setTimeout(function(){
     location.href = 'main.html';

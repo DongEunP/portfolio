@@ -8,16 +8,18 @@
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/slick.css">
   <script src="https://kit.fontawesome.com/6b9483975b.js" crossorigin="anonymous"></script>
   <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script defer src="/js/main.js"></script>
   <script src="/js/mousewheel.js"></script>
+  <script src="/js/slick.js"></script>
 </head>
 <body>
   <header class="mousewheel">
     <nav>
-      <h1><img src="/intro.html" alt="">rlo oLn</h1>
+      <a href="index.html"><h1><img src="/intro.html" alt="">rlo oLn</h1></a>
       <ul class="gnb">
         <li class="menu01 on">ABOUT ME</li>
         <li class="menu02">SKILLS</li>
@@ -28,14 +30,17 @@
     <div class="main_vs">
       <video src="/img/main_vs.mp4" autoplay="autoplay" loop></video>
       <div class="main_txt">
-        <p>재밌는것을 창작하고 즐기는</p><p>웹퍼블리셔</p>
+        <p>재밌는것을 창작하고 즐기는</p><b>웹퍼블리셔</b>
         <h2>Park Dong Eun</h2>
       </div>
+    </div>
+    <div class="pg_up">
+      <i class="fa-solid fa-caret-up"></i>
     </div>
   </header>
   <section class="sec01 mousewheel">
     <div class="sec01_wrap container">
-      <h2><a href="/intro.html">ABOUT ME</a></h2>
+      <h2>ABOUT ME</h2>
       <article class="profile">
         <div class="tab_wrap">
           <div class="pro_tab">
@@ -52,27 +57,6 @@
               <tr>
                 <th>지역</th>
                 <td>대구광역시 남구</td>
-              </tr>
-            </table>
-          </div>
-          <div class="his_tab">
-            <p>HISTORY</p>
-            <table>
-              <tr>
-                <th>2014.06</th>
-                <td>3D 영상미디어학과 졸업</td>
-              </tr>
-              <tr>
-                <th>2018.02</th>
-                <td>개인오픈마켓MD담당</td>
-              </tr>
-              <tr>
-                <th>2021.11</th>
-                <td>(주)블루콩 오픈 및 자사몰 MD담당</td>
-              </tr>
-              <tr>
-                <th>2023.02</th>
-                <td>영진직업전문학교 K-Disital 웹 퍼블리셔 과정 수료</td>
               </tr>
             </table>
           </div>
@@ -93,71 +77,110 @@
               </tr>
             </table>
           </div>
-          <div class="con_tab">
-            <p>CONTECT</p>
-            <table>
-              <tr>
-                <th>Phone</th>
-                <td>박동은</td>
-              </tr>
-              <tr>
-                <th>Email</th>
-                <td>1994.01.04</td>
-              </tr>
-            </table>
-          </div>
         </div>
-        <div class="video">
-          <video src="/img/suga.mp4" autoplay="autoplay" loof></video>
-        </div>
+        <img src="img/frame03.gif" alt="">
       </article>
     </div>
   </section>
   <section class="sec02 mousewheel">
     <div class="sec02_wrap container">
       <h2>SKILLS</h2>
-      <div class="skills">
-        <div class="html">
-          <img src="/img/html5.png" alt="">
-          <span class="skill_bar">
-            <span class="'inner_bar"></span>
-          </span>
-        </div>
-        <div class="css">
-          <img src="/img/css3.png" alt="">
-          <span class="skill_bar">
-            <span class="'inner_bar"></span>
-          </span>
-        </div>
-        <div class="js">
-          <img src="/img/js.png" alt="">
-          <span class="skill_bar">
-            <span class="'inner_bar"></span>
-          </span>
-        </div>
-        <div class="max">
-          <img src="/img/3ds.png" alt="">
-          <span class="skill_bar">
-            <span class="'inner_bar"></span>
-          </span>
-        </div>
-        <div class="photo">
-          <img src="/img/photoshop.png" alt="">
-          <span class="skill_bar">
-            <span class="'inner_bar"></span>
-          </span>
-        </div>
-        <div class="ill">
-          <img src="/img/illustrator.png" alt="">
-          <span class="skill_bar">
-            <span class="'inner_bar"></span>
-          </span>
+      <div class="skill_wrap">
+        <div class="skills">
+          <div class="html">
+            <img src="/img/skill01_html5.png" alt="">
+            <span class="skill_bar">
+              <span class="'inner_bar"></span>
+            </span>
+          </div>
+          <div class="css">
+            <img src="/img/skill02_css3.png" alt="">
+            <span class="skill_bar">
+              <span class="'inner_bar"></span>
+            </span>
+          </div>
+          <div class="js">
+            <img src="/img/skill03_js.png" alt="">
+            <span class="skill_bar">
+              <span class="'inner_bar"></span>
+            </span>
+          </div>
+          <div class="max">
+            <img src="/img/skill04_3ds.png" alt="">
+            <span class="skill_bar">
+              <span class="'inner_bar"></span>
+            </span>
+          </div>
+          <div class="photo">
+            <img src="/img/skill05_photoshop.png" alt="">
+            <span class="skill_bar">
+              <span class="'inner_bar"></span>
+            </span>
+          </div>
+          <div class="ill">
+            <img src="/img/skill06_illustrator.png" alt="">
+            <span class="skill_bar">
+              <span class="'inner_bar"></span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <section class="sec03 mousewheel">
-    <div></div>
+    <div class="sec03_wrap container">
+      <h2>PORTFOILO</h2>
+      <div class="port_wrap">
+        <div class="port01">
+          <h3>원자력병원</h3>
+          <div class="port_img">
+            <img src="img/port01_nuclean.png" alt="">
+            <div class="port_hover">
+              <div class="hover_txt">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Omnis consectetur cum repudiandae minus! Dolorem neque<br> recusandae molestias eum voluptatibus asperiores accusantium accusamus sit delectus.<br> Quasi magnam vel laboriosam quod numquam!
+                </p>
+                <dl>
+                  <dt>프로젝트 타입</dt>
+                  <dd>개인프로젝트_반응형 웹사이트 리디자인</dd>
+                  <dt>참여도</dt>
+                  <dd>100%</dd>
+                  <dt>제작기간</dt>
+                  <dd>약 2주</dd>
+                </dl>
+                <div class="port_btn">
+                  <a href="/unclear.html" target="_blank">MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="port04">
+          <h3>이케아쇼룸</h3>
+          <div class="port_img">
+            <img src="img/port04_ikea.png" alt="">
+            <div class="port_hover">
+              <div class="hover_txt">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Omnis consectetur cum repudiandae minus! Dolorem neque<br> recusandae molestias eum voluptatibus asperiores accusantium accusamus sit delectus.<br> Quasi magnam vel laboriosam quod numquam!
+                </p>
+                <dl>
+                  <dt>프로젝트 타입</dt>
+                  <dd>팀프로젝트_메타버스 홈페이지 제작</dd>
+                  <dt>참여도</dt>
+                  <dd>60%</dd>
+                  <dt>제작기간</dt>
+                  <dd>약 2주</dd>
+                </dl>
+                <div class="port_btn">
+                  <a href="/ikeaShowroom.html" target="_blank">MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <section class="sec04 mousewheel">
     <div></div>

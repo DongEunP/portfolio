@@ -23,16 +23,17 @@ $win.scroll(function(){
   let top = $('.sec01').offset().top;
   let $h2 = $('.sec01 h2')
   // console.log(top);
-  // 네비게이션,어바웃미제목
+  // 네비게이션,어바웃미제목,pg_up
   if ($win.scrollTop() >= top ) {
     $('nav').css('opacity','1');
     $h2.css('opacity','1');
+    $('.pg_up').css('opacity','1')
 
     $h2.css('animation','sec01 1s')
   } else {
     $('nav').css('opacity','0');
     $h2.css('opacity','0');
-    $h2.css('transition','1s');
+    $('.pg_up').css('opacity','0')
 
     $h2.css('animation','none');
   };
@@ -57,9 +58,10 @@ $win.scroll(function(){
 
 
   // console.log(top);
-  if ($win.scrollTop() >= sec02 ) {
+  if ($win.scrollTop() >= sec02) {
     // 스킬 대제목
-    sec02h2.css('animation','sec02 1s')
+    sec02h2.css('animation','sec01 1s')
+    sec02h2.css('opacity','1')
 
     // 스킬바  
     skill.css('animation','skill_bar 1s')
@@ -75,6 +77,7 @@ $win.scroll(function(){
   } else {
     // 스킬 대제목
     sec02h2.css('animation','none')
+    sec02h2.css('opacity','0')
 
     // 스킬바
     skill.css('animation','none')
@@ -90,7 +93,20 @@ $win.scroll(function(){
     $('.skills div').css('transition','1s')
   };
 
+  // sec03
+  let sec03 = $('.sec03').offset().top;
+  let sec03h2 = $('.sec03 h2')
 
+
+  // console.log($win.scrollTop);
+  if ($win.scrollTop() >= sec03 ) {
+    // 스킬 대제목
+    sec03h2.css('animation','sec01 1s')
+    sec03h2.css('opacity','1')
+  }else{
+    sec03h2.css('animation','none')
+    sec03h2.css('opacity','0')
+  };
 
 
 
@@ -99,14 +115,6 @@ $win.scroll(function(){
   //////////////////////////////////
 });
 
-// $(function(){
-//   if ($('.html').click) {
-//     let img = $('.html img')
-//     img.animate({scale:'1.25'}, 300);
-//   } else {
-
-//   }
-// });
 
 
 
@@ -150,5 +158,8 @@ $('.menu04').click(function(){
   var section04 = $('.sec04').offset().top;
   $('html').animate({scrollTop:section04},500)
 })
-
+$('.pg_up').click(function(){
+  var header = $('header').offset().top;
+  $('html').animate({scrollTop:header},500)
+})
 

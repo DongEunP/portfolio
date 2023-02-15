@@ -1,13 +1,5 @@
 
 
-/* .intro{
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  z-index: 99999;
-  overflow-y: hidden;
-} */
-
 
 .hide{display: none;}
 
@@ -26,7 +18,7 @@ header nav{
   height: 60px;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 99999;
   color: white;
   backdrop-filter: saturate(180%) blur(15px);
   background: #000000;
@@ -49,7 +41,25 @@ header nav ul li{
   line-height: 60px;
 }
 header nav ul li.on{color: #d251f2;}
-
+header .pg_up{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: 0.5s;
+  opacity: 0;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+header .pg_up i{
+  font-size: 2rem;
+  transform: translateY(25%);
+}
 
 
 
@@ -64,6 +74,7 @@ header .main_vs video{
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  object-position: left;
   /* width: 100%; */
   /* height: 100vh; */
 }
@@ -74,32 +85,41 @@ header .main_vs img{
 header .main_vs .main_txt{
   position: absolute;
   top: 100px;
-  left: 170px;
+  left: 250px;
+  object-position: left;
 }
 header .main_vs .main_txt h2{
-  font-size: 90px;
-  margin: 70px 0 0 230px;
+  font-size: 5.625rem;
+  font-family: nanumson;
+  margin-top: 40px;
 }
 header .main_vs .main_txt p{
-  font-size: 50px;
-  margin-top: 30px;
-  text-align: right;
+  font-size: 2.625rem;
+  font-family: nanumson;
+}
+header .main_vs .main_txt b{
+  font-size: 3.5rem;
+  font-family: nanumson;
+  font-weight: 400;
 }
 
-
+/* 섹션공통 */
+section h2{
+  position: absolute;
+  top: 10%;
+  font-size: 4rem;
+  transition: 1s;
+}
 
 /* 섹션 */
 .sec01{
   width: 100%;
   height: 100%;
+  background : url(../img/sec01_bg.png) no-repeat;
+  background-size: cover;
 }
 .sec01_wrap{
   position: relative;
-}
-.sec01_wrap h2{
-  position: absolute;
-  top: 10%;
-  font-size: 4rem;
 }
 @keyframes sec01{
   0%{left: -20%;}
@@ -107,7 +127,6 @@ header .main_vs .main_txt p{
 }
 
 /* sec01_article */
-
 .sec01 .profile{
   width: 100%;
   height: 100%;
@@ -119,16 +138,17 @@ header .main_vs .main_txt p{
 .sec01 .profile .tab_wrap{
   width: 60%;
   height: 50%;
-  background-color: #ffff;
+  background-color: rgba(225, 225, 225, 0.5);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  backdrop-filter: saturate(180%) blur(15px);
 }
 .sec01 .profile .tab_wrap div{
   width: 50%;
-  padding-left: 8%;
+  padding-left: 5%;
 }
 .sec01 .profile .tab_wrap p{
   font-size: 2rem;
@@ -145,13 +165,12 @@ header .main_vs .main_txt p{
   font-size: 1.125rem;
 }
 .sec01 .profile .video{
-  max-width: 700px;
-  max-height: 700px;
-  background-color: black;
+  max-width: 32.5%;
+  max-height: 46.3%;
 }
-.sec01 .profile .video video{
-  width: 700px;
-  height: 700px;
+.sec01 .profile .video img{
+  width: 100%;
+  height: 100%;
 }
 
 /* sec02 */
@@ -163,12 +182,16 @@ header .main_vs .main_txt p{
 }
 .sec02_wrap .skills{
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  position: absolute;
-  bottom: 0;
+  align-content: flex-end;
+}
+.skill_wrap{
+  width: 100%;
+  height: 100%;
 }
 .sec02_wrap .skills div{
   width: 21%;
@@ -186,12 +209,6 @@ header .main_vs .main_txt p{
   width: 23%;
 }
 
-.sec02_wrap h2{
-  font-size: 4rem;
-  position: absolute;
-  top: 10%;
-  left: 0;
-}
 .skill_bar{
   display: inline-block;
   width: 70%;
@@ -233,6 +250,87 @@ header .main_vs .main_txt p{
   width: 100%;
   height: 100%;
   background-color: antiquewhite;
+}
+.sec03 .sec03_wrap{
+  position: relative;
+  z-index: 3;
+}
+.sec03 .sec03_wrap .port_wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+/* port01 */
+.sec03 .sec03_wrap .port_wrap>div{
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec03 .sec03_wrap .port_wrap>div h3{
+  font-size: 2.5rem;
+}
+.sec03 .sec03_wrap .port_wrap>div h3::after{
+  position: relative;
+  top: -1.2rem;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #f7d241;
+  z-index: -1;
+}
+/* .port_img */
+.sec03_wrap .port_wrap>div>div{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.sec03_wrap .port_wrap>div>div:hover .port_hover{
+  opacity: 1;
+  transition: 0.3s;
+}
+.sec03_wrap .port_hover{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: saturate(100%) blur(10px);
+  position: absolute;
+  top: 0;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.sec03_wrap .port_hover .hover_txt dl{
+  margin-top: 40px;
+}
+.sec03_wrap .port_hover .hover_txt dl dt{
+  margin: 20px auto 5px auto;
+  width:fit-content;
+  background-color: #000000;
+}
+.sec03_wrap .port_hover .hover_txt .port_btn{
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #f7d241;
+  color: #333333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 40px auto 0 auto;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.sec03_wrap .port_hover .hover_txt .port_btn:hover{
+  scale: 1.1;
+  transition: 0.2s;
 }
 
 /* sec04 */

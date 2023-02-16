@@ -50,21 +50,99 @@ $win.scroll(function(){
   //   $('.menu02').css('color','inherit')
   // }
 
-
+  
   // sec02
   let sec02 = $('.sec02').offset().top;
   let sec02h2 = $('.sec02 h2')
-  let skill = $('.skill_bar span')
-
+  let pro01 = $('.html .skill_bar')
+  let pro02 = $('.css .skill_bar')
+  let pro03 = $('.js .skill_bar')
+  let pro04 = $('.max .skill_bar')
+  let pro05 = $('.photo .skill_bar')
+  let pro06 = $('.ill .skill_bar')
+  
+  
+  // 프로그레스
+  $(function(){
+    var bar01 = new ProgressBar.Circle('.pro01', {
+      strokeWidth: 6,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: null
+    });
+    var bar02 = new ProgressBar.Circle('.pro02', {
+      strokeWidth: 6,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: null
+    });
+    var bar03 = new ProgressBar.Circle('.pro03', {
+      strokeWidth: 6,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: null
+    });
+    var bar04 = new ProgressBar.Circle('.pro04', {
+      strokeWidth: 6,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: null
+    });
+    var bar05 = new ProgressBar.Circle('.pro05', {
+      strokeWidth: 6,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: null
+    });
+    var bar06 = new ProgressBar.Circle('.pro06', {
+      strokeWidth: 6,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: null
+    });
+  
+    bar01.animate(0.9);  // Number from 0.0 to 1.0
+    bar02.animate(0.9);
+    bar03.animate(0.8);
+    bar04.animate(0.8);
+    bar05.animate(0.9);
+    bar06.animate(0.9);
+  })
 
   // console.log(top);
   if ($win.scrollTop() >= sec02) {
+    // 스킬 프로그레스 on
+    pro01.addClass('pro01')
+    pro02.addClass('pro02')
+    pro03.addClass('pro03')
+    pro04.addClass('pro04')
+    pro05.addClass('pro05')
+    pro06.addClass('pro06')
+
+
+
+
     // 스킬 대제목
     sec02h2.css('animation','sec01 1s')
     sec02h2.css('opacity','1')
-
-    // 스킬바  
-    skill.css('animation','skill_bar 1s')
 
     // 스킬img  
     skhtml.css('animation','skill 1s')
@@ -75,12 +153,19 @@ $win.scroll(function(){
     skillu.css('animation','skill 1s')
     $('.skills div').css('opacity','1')
   } else {
+
+        // 스킬 프로그래스 off
+    pro01.removeClass('pro01')
+    pro02.removeClass('pro02')
+    pro03.removeClass('pro03')
+    pro04.removeClass('pro04')
+    pro05.removeClass('pro05')
+    pro06.removeClass('pro06')
+
+
     // 스킬 대제목
     sec02h2.css('animation','none')
     sec02h2.css('opacity','0')
-
-    // 스킬바
-    skill.css('animation','none')
 
     // 스킬wrap
     skhtml.css('animation','none')
@@ -91,7 +176,15 @@ $win.scroll(function(){
     skillu.css('animation','none')
     $('.skills div').css('opacity','0')
     $('.skills div').css('transition','1s')
+
+
   };
+  $('.skill_bar svg:not(:eq(0))').remove();
+  $('.progressbar-text:not(:eq(0))').remove();
+  $('.pro01 svg:eq(0)').remove();
+  // console.log($('.pro01 svg:eq(1)'))
+
+
 
   // sec03
   let sec03 = $('.sec03').offset().top;
@@ -106,6 +199,8 @@ $win.scroll(function(){
   }else{
     sec03h2.css('animation','none')
     sec03h2.css('opacity','0')
+
+
   };
 
 
@@ -134,6 +229,7 @@ $(window).scroll(function(){
       let index = $(this).index()-1;
       $menu.removeClass('on')
       $menu.eq(index).addClass('on');
+
     }
 
   })
@@ -162,4 +258,6 @@ $('.pg_up').click(function(){
   var header = $('header').offset().top;
   $('html').animate({scrollTop:header},500)
 })
+
+
 

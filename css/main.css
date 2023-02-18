@@ -23,11 +23,11 @@
   width: 100%;
   text-align: center;
   line-height: 40px;
-  font-size: 30px;
+  font-size: 30vw;
 }
 .circle strong i {
   font-style: normal;
-  font-size: 0.6em;
+  font-size: 0.6vw;
   font-weight: normal;
 }
 .circle span {
@@ -90,7 +90,7 @@ header .pg_up{
   cursor: pointer;
 }
 header .pg_up i{
-  font-size: 2rem;
+  font-size: 2vw;
   transform: translateY(25%);
 }
 
@@ -140,7 +140,7 @@ header .main_vs .main_txt b{
 section h2{
   position: absolute;
   top: 10%;
-  font-size: 4vw;
+  font-size: 3vw;
   transition: 1s;
 }
 
@@ -185,18 +185,18 @@ section h2{
   padding-left: 5%;
 }
 .sec01 .profile .tab_wrap p{
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: 700;
   margin-bottom: 30px;
 }
 .sec01 .profile .tab_wrap th{
-  font-size: 1.25rem;
+  font-size: 1.25vw;
   font-weight: 600;
   text-align: left;
   padding-right: 20px;
 }
 .sec01 .profile .tab_wrap td{
-  font-size: 1.125rem;
+  font-size: 1.125vw;
 }
 .sec01 .profile .video{
   max-width: 32.5%;
@@ -220,6 +220,9 @@ section h2{
   height: 70%;
   position: relative;
 }
+.skill_wrap h2{
+  top: 14%;
+}
 .sec02_wrap .skills{
   width: 100%;
   height: 100%;
@@ -230,13 +233,13 @@ section h2{
   align-content: flex-end;
 
 }
-.sec02_wrap .skills div{
+.sec02_wrap .skills>div{
   width: 21%;
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: 0;
-  padding-bottom: 100px;
+  padding-bottom: 10%;
 }
 .sec02_wrap .skills div img{
   width: 60%;
@@ -244,8 +247,9 @@ section h2{
 .sec02 article{
   width: 100%;
   height: 30%;
-  background-color: black;
+  background: linear-gradient(pink,violet);
   color: white;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2) ;
 }
 .sec02 article .history{
   height: 100%;
@@ -269,11 +273,23 @@ section h2{
   transform: translate(-50%,-50%);
 }
 .skill_bar strong{
+  /* position: absolute; */
+  /* top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem; */
+}
+.sec02 .skill_num{
   position: absolute;
   top: -40%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2.5rem;
+  font-size: 2.5vw;
+  /* display: flex !important; */
+  /* flex-direction: row; */
+}
+.sec02 .skill_num strong, .sec02 .skill_num b{
+
 }
 
 /* .skill_bar{
@@ -309,7 +325,7 @@ section h2{
 
 @keyframes skill {
   0%{padding: 0; opacity: 0;}
-  100%{padding-bottom: 100px;}
+  100%{padding-bottom: 10%;}
 }
 
 .circle{
@@ -322,29 +338,46 @@ section h2{
 .sec03{
   width: 100%;
   height: 100%;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 .sec03 .sec03_wrap{
-  position: relative;
   z-index: 3;
   height: 100%;
 }
+
 .sec03 .sec03_wrap .port_wrap{
-  width: 100%;
+  position: relative;
   height: 100%;
-  display: flex;
+  /* display: flex; */
+}
+.sec03 .sec03_wrap h2{
+  margin-left: 200px;
+  z-index: 999;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: 50px !important;
 }
 /* port01 */
 .sec03 .sec03_wrap .port_wrap>div{
-  width: 60%;
-  margin: 0 auto;
+  width: 50% !important;
+  margin: 3% auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.sec03 .sec03_wrap .port_wrap>div b{
+  position: absolute;
+  font-size: 12vw;
+  left: 50%;
+  top: 3%;
+  transform: translateX(-50%);
+  z-index: -1;
+  color: rgb(255, 236, 239);
+}
 .sec03 .sec03_wrap .port_wrap>div h3{
-  font-size: 2.5rem;
+  font-size: 2.5vw;
+  padding-bottom: 5%;
 }
 .sec03 .sec03_wrap .port_wrap>div h3::after{
   position: relative;
@@ -407,6 +440,7 @@ section h2{
   transition: 0.2s;
 }
 
+
 /* sec04 */
 .sec04{
   width: 100%;
@@ -426,33 +460,50 @@ section h2{
 }
 .sec04 .sec04_wrap .con_box{
   border-radius: 5%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.249);
   backdrop-filter: saturate(100%) blur(10px);
+  color: white;
 }
 .sec04 .sec04_wrap .con_box .con_wrap{
   width: 80%;
   height: 80%;
-  margin: 0 auto;
+  margin: 3% auto 0 auto;
 }
 .sec04 .sec04_wrap .con_box .con_wrap li{
   padding: 2% 0;
 }
-.sec04 .sec04_wrap .con_box .con_wrap label{
+.sec04 .sec04_wrap .con_box .con_wrap ul label{
   display: inline-block;
   width: 30%;
+  height: 10%;
 }
-.sec04 .sec04_wrap .con_box .con_wrap input{
+.sec04 .sec04_wrap .con_box .con_wrap ul input{
   width: 69%;
   margin-right: 0;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
 }
 .sec04 .sec04_wrap .con_box .con_wrap ul li:last-child label{
   width: 0;
 }
 .sec04 .sec04_wrap .con_box .con_wrap ul li:last-child textarea{
   width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+.send{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.send>*{
+  margin: 1% 0;
 }
 .con_wrap button{
-  width: 200px;
-  height: 100px;
+  width: 100px;
+  height: 50px;
   background-color: #FFF;
+  border: none;
+  border-radius: 5px;
 }

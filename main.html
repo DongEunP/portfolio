@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <script src="https://kit.fontawesome.com/6b9483975b.js" crossorigin="anonymous"></script>
   <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -16,6 +17,7 @@
   <script src="js/slick.js"></script>
   <script src="js/progressbar.js"></script>
   <script defer src="js/main.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
 </head>
 <body>
   <header class="mousewheel">
@@ -90,37 +92,49 @@
         <div class="skills">
           <div class="html">            
             <span class="skill_bar">
-              <strong>90%</strong>
+              <div class="skill_num">
+                <strong>90</strong><b>%</b>
+              </div>
               <img src="/img/skill01_html5.png" alt="">
             </span>
           </div>
           <div class="css">            
             <span class="skill_bar">
-              <strong>90%</strong>
+              <div class="skill_num">
+                <strong>90</strong><b>%</b>
+              </div>
               <img src="/img/skill02_css3.png" alt="">
             </span>
           </div>
           <div class="js">            
             <span class="skill_bar">
-              <strong>80%</strong>
+              <div class="skill_num">
+                <strong>80</strong><b>%</b>
+              </div>
               <img src="/img/skill03_js.png" alt="">
             </span>
           </div>
           <div class="max">
             <span class="skill_bar">
-              <strong>80%</strong>
+              <div class="skill_num">
+                <strong>80</strong><b>%</b>
+              </div>
               <img src="/img/skill04_3ds.png" alt="">
             </span>
           </div>
           <div class="photo">
             <span class="skill_bar">
-              <strong>90%</strong>
+              <div class="skill_num">
+                <strong>90</strong><b>%</b>
+              </div>
               <img src="/img/skill05_photoshop.png" alt="">
             </span>
           </div>
           <div class="ill">
             <span class="skill_bar">
-              <strong>90%</strong>
+              <div class="skill_num">
+                <strong>90</strong><b>%</b>
+              </div>
               <img src="/img/skill06_illustrator.png" alt="">
             </span>
           </div>
@@ -148,10 +162,11 @@
 
   </section>
   <section class="sec03 mousewheel">
-    <div class="sec03_wrap container">
+    <div class="sec03_wrap swiper">
       <h2>PORTFOILO</h2>
-      <div class="port_wrap">
-        <div class="port01">
+      <div class="port_wrap swiper-wrapper">
+        <div class="port01 swiper-slide">
+          <b>01</b>
           <h3>원자력병원</h3>
           <div class="port_img">
             <img src="img/port01_nuclean.png" alt="">
@@ -175,7 +190,83 @@
             </div>
           </div>
         </div>
-        <div class="port04">
+        <div class="port02 swiper-slide">
+          <b>02</b>
+          <h3>이케아쇼룸</h3>
+          <div class="port_img">
+            <img src="img/port04_ikea.png" alt="">
+            <div class="port_hover">
+              <div class="hover_txt">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Omnis consectetur cum repudiandae minus! Dolorem neque<br> recusandae molestias eum voluptatibus asperiores accusantium accusamus sit delectus.<br> Quasi magnam vel laboriosam quod numquam!
+                </p>
+                <dl>
+                  <dt>프로젝트 타입</dt>
+                  <dd>팀프로젝트_메타버스 홈페이지 제작</dd>
+                  <dt>참여도</dt>
+                  <dd>60%</dd>
+                  <dt>제작기간</dt>
+                  <dd>약 2주</dd>
+                </dl>
+                <div class="port_btn">
+                  <a href="/ikeaShowroom.html" target="_blank">MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="port03 swiper-slide">
+          <b>03</b>
+          <h3>이케아쇼룸</h3>
+          <div class="port_img">
+            <img src="img/port04_ikea.png" alt="">
+            <div class="port_hover">
+              <div class="hover_txt">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Omnis consectetur cum repudiandae minus! Dolorem neque<br> recusandae molestias eum voluptatibus asperiores accusantium accusamus sit delectus.<br> Quasi magnam vel laboriosam quod numquam!
+                </p>
+                <dl>
+                  <dt>프로젝트 타입</dt>
+                  <dd>팀프로젝트_메타버스 홈페이지 제작</dd>
+                  <dt>참여도</dt>
+                  <dd>60%</dd>
+                  <dt>제작기간</dt>
+                  <dd>약 2주</dd>
+                </dl>
+                <div class="port_btn">
+                  <a href="/ikeaShowroom.html" target="_blank">MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="port04 swiper-slide">
+          <b>04</b>
+          <h3>이케아쇼룸</h3>
+          <div class="port_img">
+            <img src="img/port04_ikea.png" alt="">
+            <div class="port_hover">
+              <div class="hover_txt">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Omnis consectetur cum repudiandae minus! Dolorem neque<br> recusandae molestias eum voluptatibus asperiores accusantium accusamus sit delectus.<br> Quasi magnam vel laboriosam quod numquam!
+                </p>
+                <dl>
+                  <dt>프로젝트 타입</dt>
+                  <dd>팀프로젝트_메타버스 홈페이지 제작</dd>
+                  <dt>참여도</dt>
+                  <dd>60%</dd>
+                  <dt>제작기간</dt>
+                  <dd>약 2주</dd>
+                </dl>
+                <div class="port_btn">
+                  <a href="/ikeaShowroom.html" target="_blank">MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="port05 swiper-slide">
+          <b>05</b>
           <h3>이케아쇼룸</h3>
           <div class="port_img">
             <img src="img/port04_ikea.png" alt="">
@@ -200,6 +291,9 @@
           </div>
         </div>
       </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
   <section class="sec04 mousewheel">
@@ -208,30 +302,40 @@
       <div></div>
       <div class="con_box">
         <div class="con_wrap">
-          <form class="gform" method="POST" data-email="cutesm27@gmal.com" action="https://script.google.com/macros/s/ AKfycby9zqsPXBDVg_DgKgVI3SjukERpjimKzEkwAt4SdxSsnDsMW923Nn9QeItR_SrjUWHY/exec">
+          <form class="gform" method="POST" data-email="cutesm27@gmal.com" action="https://script.google.com/macros/s/AKfycbx4X6NdXLMky_oPSvaIdw86d4WCOaz76H1I1GOXtdRyWzpYojU0phwFFWdZV1SI42Mi/exec">
             <ul>
               <li>
                 <label for="con_name">NAME</label>
-                <input type="text" name="name" id="con_name" title="NAME" placeholder="NAME" required>
+                <input type="text" name="name" id="con_name" title="NAME" placeholder="이름" required>
               </li>
               <li>
                 <label for="con_email">E-MAIL</label>
-                <input type="email" name="email" id="con_email" title="E-MAIL" placeholder="E-MAIL" required>
+                <input type="email" name="email" id="con_email" title="E-MAIL" placeholder="메일주소" required>
               </li>
               <li>
                 <label for="con_sub">SUBJECT</label>
-                <input type="text" name="subject" id="con_sub" title="SUBJECT" placeholder="SUBJECT" required>
+                <input type="text" name="subject" id="con_sub" title="SUBJECT" placeholder="제목" required>
               </li>
               <li>
                 <label for="con_message"></label>
                 <textarea id="con_message" name="message" title="MESSAGE" rows="10" placeholder="보내실 내용을 입력해주세요." required></textarea>
               </li>
             </ul>
-            <button type="submit" name="submit" id="submit">SEND MAIL</button>
+            <div class="send">
+              <p>본인은 개인정보 보호법 제 15조에 의거하여 본인의 개인정보(이메일)를 제공할 것을 동의합니다.</p>
+              <div class="check">
+                <input type="checkbox" name="agree" id="agree" required checked>
+                <label for="agree">개인정보 수집 내용에 동의합니다.</label>
+              </div>
+              <button type="submit" name="submit" id="submit">SEND MAIL</button>
+            </div>
           </form>
         </div>
       </div>
     </div>
   </section>
+  <script data-cfasync="false" type="text/javascript" 
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js">
+  </script> 
 </body>
 </html>

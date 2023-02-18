@@ -19,6 +19,8 @@ let sk3d = $('.max')
 let skpho = $('.photo')
 let skillu = $('.ill')
 let $win = $(window);
+
+// 스크롤이벤트
 $win.scroll(function(){
   let top = $('.sec01').offset().top;
   let $h2 = $('.sec01 h2')
@@ -37,18 +39,6 @@ $win.scroll(function(){
 
     $h2.css('animation','none');
   };
-  // var section01 = $('.sec01').offset().top;
-  // if ($win.scrollTop() >= section01){
-  //   $('.menu01').css('color','#d251f2')
-  // }else{
-  //   $('.menu01').css('color','#fff')
-  // }
-  // let section02 = $('.sec02').offset().top;
-  // if ($win.scrollTop() >= section02){
-  //   $('.menu02').css('color','#d251f2')
-  // }else{
-  //   $('.menu02').css('color','inherit')
-  // }
 
   
   // sec02
@@ -60,8 +50,7 @@ $win.scroll(function(){
   let pro04 = $('.max .skill_bar')
   let pro05 = $('.photo .skill_bar')
   let pro06 = $('.ill .skill_bar')
-  
-  
+    
   // 프로그레스
   $(function(){
     var bar01 = new ProgressBar.Circle('.pro01', {
@@ -127,8 +116,8 @@ $win.scroll(function(){
     bar06.animate(0.9);
   })
 
-  // console.log(top);
-  if ($win.scrollTop() >= sec02) {
+  // sec02 gnb제외 전체
+  if ($win.scrollTop() == sec02) {
     // 스킬 프로그레스 on
     pro01.addClass('pro01')
     pro02.addClass('pro02')
@@ -138,6 +127,69 @@ $win.scroll(function(){
     pro06.addClass('pro06')
 
 
+      // sec02 숫자 카운트
+    var count0 = count1 = count2 = count3 = count4 = count5 = 0;
+
+    timeCounter();
+
+    function timeCounter() {
+
+      id0 = setInterval(count0Fn, 11.1111);
+      function count0Fn() {
+        count0++;
+        if (count0 > 90) {
+          clearInterval(id0);
+        } else {
+          $("strong").eq(0).text(count0);
+        }
+
+      }
+      id1 = setInterval(count1Fn, 11.1111);
+      function count1Fn() {
+        count1++;
+        if (count1 > 90) {
+          clearInterval(id1);
+        } else {
+          $("strong").eq(1).text(count1);
+        }
+      }
+      id2 = setInterval(count2Fn, 12.5);
+      function count2Fn() {
+        count2++;
+        if (count2 > 80) {
+          clearInterval(id2);
+        } else {
+          $("strong").eq(2).text(count2);
+        }
+      }
+      id3 = setInterval(count3Fn, 12.5);
+      function count3Fn() {
+        count3++;
+        if (count3 > 80) {
+          clearInterval(id3);
+        } else {
+          $("strong").eq(3).text(count3);
+        }
+      }
+      id4 = setInterval(count4Fn, 11.1111);
+      function count4Fn() {
+        count4++;
+        if (count4 > 90) {
+          clearInterval(id4);
+        } else {
+          $("strong").eq(4).text(count4);
+        }
+      }
+      id5 = setInterval(count5Fn, 11.1111);
+      function count5Fn() {
+        count5++;
+        if (count5 > 90) {
+          clearInterval(id5);
+        } else {
+          $("strong").eq(5).text(count5);
+        }
+      }
+    }
 
 
     // 스킬 대제목
@@ -161,7 +213,7 @@ $win.scroll(function(){
     pro04.removeClass('pro04')
     pro05.removeClass('pro05')
     pro06.removeClass('pro06')
-
+    
 
     // 스킬 대제목
     sec02h2.css('animation','none')
@@ -190,8 +242,6 @@ $win.scroll(function(){
   let sec03 = $('.sec03').offset().top;
   let sec03h2 = $('.sec03 h2')
 
-
-  // console.log($win.scrollTop);
   if ($win.scrollTop() >= sec03 ) {
     // 스킬 대제목
     sec03h2.css('animation','sec01 1s')
@@ -209,9 +259,6 @@ $win.scroll(function(){
 
   //////////////////////////////////
 });
-
-
-
 
 // 섹션 이동시 메뉴 색상 변경
 let $menu = $('.gnb li')
@@ -260,4 +307,128 @@ $('.pg_up').click(function(){
 })
 
 
+// sec03 슬라이드
+$(function(){
+  // var swiper = new Swiper(".swiper", {
+  //     direction: 'horizontal',
+  //     slidesPerView: 3,
+  //     spaceBetween: 30,
+  //     pagination: {
+  //       el: ".swiper-pagination",
+  //       clickable: true,
+  //     }
 
+  // });
+
+  const progressCircle = document.querySelector(".autoplay-progress svg");
+  const progressContent = document.querySelector(".autoplay-progress span");
+  var swiper = new Swiper(".swiper",{
+    slidesPerView: 'auto',
+    spaceBetween: 100,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+  })
+
+
+  //   $('.port_wrap').slick({
+  // slidesToShow: 3,
+  // slidesToScroll: 1,
+  // autoplay: true,
+  // autoplaySpeed: 2000,
+  // });
+// var swiper = new Swiper(".swiper", {
+//   spaceBetween: 50,
+//   slidesPerView: 1,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+//   history: {
+//     key: "slide",
+//   },
+});
+
+// $(document).ready(function () {
+//   slider();
+// })
+
+// function slider() {
+//   var winW = window.innerWidth; //화면 가로사이즈
+//   var swiper = undefined;
+//   var viewNum = ''; //슬라이드 개수 (옵션)
+//   var loopChk = ''; //무한반복 체크
+//   var slideNum = $('.slider .swiper-slide').length //슬라이드 총 개수
+//   var slideInx = 0; //현재 슬라이드 index
+
+//   //디바이스 체크
+//   var winWChk = ''; 
+//   $(window).on('load resize', function () {
+//       winW = window.innerWidth;
+//       if(winWChk != 'mo' && winW <= 768){ //모바일 버전으로 전환할 때
+//           winWChk = 'mo'
+//           setTimeout(function() {
+//               sliderAct();
+//           }, 300);
+//       }
+
+//       if(winWChk != 'pc' && winW >= 769){ //PC 버전으로 전환할 때
+//           winWChk = 'pc'
+//           setTimeout(function() {
+//               sliderAct();
+//           }, 300);
+//       }
+//   })
+
+//   function sliderAct(){
+//       //슬라이드 초기화 
+//       if (swiper != undefined){ 
+//           swiper.destroy();
+//           swiper = undefined;
+//       }
+
+//       //slidesPerView 옵션 설정
+//       if (winW > 768){ //PC 버전
+//           viewNum = 4;
+//       }else{ //mobile 버전
+//           viewNum = 2;
+//       }
+
+//       //loop 옵션 체크
+//       if (slideNum > viewNum){
+//           loopChk = true;
+//       }else{ 
+//           loopChk = false;
+//       }
+
+//       swiper = new Swiper(".slider .inner", {
+//           slidesPerView: "auto",
+//           initialSlide :slideInx,
+//           loop: loopChk,
+//           centeredSlides: true,
+//           navigation: {
+//               nextEl: $('.slider .swiper-next'),
+//               prevEl: $('.slider .swiper-prev'),
+//           },
+//           on: {
+//               activeIndexChange: function () {
+//                   slideInx = this.realIndex; //현재 슬라이드 index 갱신
+//               }
+//           },
+//       });
+//   }
+// }

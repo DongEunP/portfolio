@@ -179,24 +179,26 @@ section h2{
   align-items: center;
   justify-content: space-evenly;
   backdrop-filter: saturate(180%) blur(15px);
+  border-radius: 20px;
 }
-.sec01 .profile .tab_wrap div{
-  width: 50%;
-  padding-left: 5%;
+.sec01 .profile .tab_wrap>div{
+  width: 80%;
+  text-align: center;
 }
-.sec01 .profile .tab_wrap p{
+.sec01 .profile .tab_wrap h3{
   font-size: 2vw;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 2%;
 }
-.sec01 .profile .tab_wrap th{
+/* .sec01 .profile .tab_wrap p{
   font-size: 1.25vw;
   font-weight: 600;
   text-align: left;
   padding-right: 20px;
-}
-.sec01 .profile .tab_wrap td{
-  font-size: 1.125vw;
+  text-align: center;
+} */
+.sec01 .profile .tab_wrap p{
+  font-size: 1vw;
 }
 .sec01 .profile .video{
   max-width: 32.5%;
@@ -205,6 +207,21 @@ section h2{
 .sec01 .profile .video img{
   width: 100%;
   height: 100%;
+}
+.imoticon{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.imoticon>div{
+  width: 30%;
+}
+.imoticon img{
+  width: 40%;
+  margin: 20% 0 5% 0;
+}
+.imoticon p{
+  font-size: 0.75vw !important;
 }
 
 /* sec02 */
@@ -244,18 +261,7 @@ section h2{
 .sec02_wrap .skills div img{
   width: 60%;
 }
-.sec02 article{
-  width: 100%;
-  height: 30%;
-  background: linear-gradient(pink,violet);
-  color: white;
-  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2) ;
-}
-.sec02 article .history{
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
+
 /* 스킬 호버 */
 .sec02_wrap .skills .html:hover,.sec02_wrap .skills .css:hover,.sec02_wrap .skills .js:hover,.sec02_wrap .skills .max:hover, .sec02_wrap .skills .photo:hover, .sec02_wrap .skills .ill:hover{
   width: 30%;
@@ -288,35 +294,27 @@ section h2{
   /* display: flex !important; */
   /* flex-direction: row; */
 }
-.sec02 .skill_num strong, .sec02 .skill_num b{
-
+.sec02 article{
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(pink,violet);
+  color: white;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2) ;
+}
+.sec02 article .history{
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.sec02 article .history h3{
+  font-size: 1.625vw;
+  margin: 30px 0;
+}
+.sec02 article .history li{
+  font-size: 1.125vw;
 }
 
-/* .skill_bar{
-  display: inline-block;
-  width: 70%;
-  height: 20px;
-  border: 1px solid #838383;
-  border-radius: 10px;
-  position: relative;
-  margin-top: 20px;
-}
-.skill_bar span{
-  width: 90%;
-  height: 18px;
-  background-color: #333333;
-  border-radius: 10px;
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  z-index: 1;
-} */
-
-/* @keyframes skill_bar{
-  0%{width: 0;}
-  100%{width: 90%;}
-} */
 
 @keyframes sec02{
   0%{left: -20%;}
@@ -328,11 +326,6 @@ section h2{
   100%{padding-bottom: 10%;}
 }
 
-.circle{
-  width: 200px;
-  height: 200px;
-  position: relative;
-}
 
 /* sec03 */
 .sec03{
@@ -355,7 +348,7 @@ section h2{
   z-index: 999;
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
-  bottom: 50px !important;
+  bottom: 2% !important;
 }
 /* port01 */
 .sec03 .sec03_wrap .port_wrap>div{
@@ -442,10 +435,32 @@ section h2{
 
 
 /* sec04 */
+footer h2{
+  position: absolute;
+  top: 10%;
+  font-size: 3vw;
+  transition: 1s;
+}
+.sec04 .sec04_img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.sec04 .sec04_img p{
+  font-size: 1.125vw;
+  color: white;
+  font-weight: 900;
+  margin: 3% 0;
+  padding: 2%;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
 .sec04{
   width: 100%;
   height: 100%;
-  background: url(../img/sec04_bg.jpg) no-repeat;
+  background: url(../img/sec04_bg02.png) no-repeat;
   background-size: cover;
 }
 .sec04 .sec04_wrap{
@@ -457,6 +472,9 @@ section h2{
 .sec04 .sec04_wrap>div{
   width: 50%;
   height: 60%;
+}
+.sec04 .sec04_img img{
+  width: 50%;
 }
 .sec04 .sec04_wrap .con_box{
   border-radius: 5%;

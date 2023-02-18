@@ -253,7 +253,20 @@ $win.scroll(function(){
 
   };
 
+  // footer
+  let footer = $('footer').offset().top;
+  let footerH2 = $('footer h2')
 
+  if ($win.scrollTop() >= footer ) {
+    // 스킬 대제목
+    footerH2.css('animation','sec01 1s')
+    footerH2.css('opacity','1')
+  }else{
+    footerH2.css('animation','none')
+    footerH2.css('opacity','0')
+
+
+  };
 
 
 
@@ -271,7 +284,7 @@ $(window).scroll(function(){
   //   $('선택자:eq(index)')
   // })
   
-  $('section').each(function(){
+  $('.move').each(function(){
     if($(this).offset().top <= $(window).scrollTop()){
       let index = $(this).index()-1;
       $menu.removeClass('on')
@@ -298,7 +311,7 @@ $('.menu03').click(function(){
   $('html').animate({scrollTop:section03},500)
 })
 $('.menu04').click(function(){
-  var section04 = $('.sec04').offset().top;
+  var section04 = $('footer').offset().top;
   $('html').animate({scrollTop:section04},500)
 })
 $('.pg_up').click(function(){
@@ -309,17 +322,6 @@ $('.pg_up').click(function(){
 
 // sec03 슬라이드
 $(function(){
-  // var swiper = new Swiper(".swiper", {
-  //     direction: 'horizontal',
-  //     slidesPerView: 3,
-  //     spaceBetween: 30,
-  //     pagination: {
-  //       el: ".swiper-pagination",
-  //       clickable: true,
-  //     }
-
-  // });
-
   const progressCircle = document.querySelector(".autoplay-progress svg");
   const progressContent = document.querySelector(".autoplay-progress span");
   var swiper = new Swiper(".swiper",{
@@ -340,95 +342,4 @@ $(function(){
       prevEl: ".swiper-button-prev"
     },
   })
-
-
-  //   $('.port_wrap').slick({
-  // slidesToShow: 3,
-  // slidesToScroll: 1,
-  // autoplay: true,
-  // autoplaySpeed: 2000,
-  // });
-// var swiper = new Swiper(".swiper", {
-//   spaceBetween: 50,
-//   slidesPerView: 1,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-//   history: {
-//     key: "slide",
-//   },
-});
-
-// $(document).ready(function () {
-//   slider();
-// })
-
-// function slider() {
-//   var winW = window.innerWidth; //화면 가로사이즈
-//   var swiper = undefined;
-//   var viewNum = ''; //슬라이드 개수 (옵션)
-//   var loopChk = ''; //무한반복 체크
-//   var slideNum = $('.slider .swiper-slide').length //슬라이드 총 개수
-//   var slideInx = 0; //현재 슬라이드 index
-
-//   //디바이스 체크
-//   var winWChk = ''; 
-//   $(window).on('load resize', function () {
-//       winW = window.innerWidth;
-//       if(winWChk != 'mo' && winW <= 768){ //모바일 버전으로 전환할 때
-//           winWChk = 'mo'
-//           setTimeout(function() {
-//               sliderAct();
-//           }, 300);
-//       }
-
-//       if(winWChk != 'pc' && winW >= 769){ //PC 버전으로 전환할 때
-//           winWChk = 'pc'
-//           setTimeout(function() {
-//               sliderAct();
-//           }, 300);
-//       }
-//   })
-
-//   function sliderAct(){
-//       //슬라이드 초기화 
-//       if (swiper != undefined){ 
-//           swiper.destroy();
-//           swiper = undefined;
-//       }
-
-//       //slidesPerView 옵션 설정
-//       if (winW > 768){ //PC 버전
-//           viewNum = 4;
-//       }else{ //mobile 버전
-//           viewNum = 2;
-//       }
-
-//       //loop 옵션 체크
-//       if (slideNum > viewNum){
-//           loopChk = true;
-//       }else{ 
-//           loopChk = false;
-//       }
-
-//       swiper = new Swiper(".slider .inner", {
-//           slidesPerView: "auto",
-//           initialSlide :slideInx,
-//           loop: loopChk,
-//           centeredSlides: true,
-//           navigation: {
-//               nextEl: $('.slider .swiper-next'),
-//               prevEl: $('.slider .swiper-prev'),
-//           },
-//           on: {
-//               activeIndexChange: function () {
-//                   slideInx = this.realIndex; //현재 슬라이드 index 갱신
-//               }
-//           },
-//       });
-//   }
-// }
+})

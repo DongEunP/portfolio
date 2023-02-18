@@ -476,6 +476,14 @@ footer h2{
 .sec04 .sec04_img img{
   width: 50%;
 }
+.sec04 .sns{
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.sec04 .sns img{
+  width: 100%;
+}
 .sec04 .sec04_wrap .con_box{
   border-radius: 5%;
   background-color: rgba(0, 0, 0, 0.249);
